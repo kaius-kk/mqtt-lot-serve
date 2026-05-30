@@ -1,0 +1,25 @@
+# 1. Maven 构建与包装器相关
+target/                         # 忽略 Maven 编译生成的 target 目录
+!.mvn/wrapper/maven-wrapper.jar # 保留 Maven Wrapper 的 jar 包
+!**/src/main/**/target/         # 保留 src/main 下的 target 目录（某些插件生成代码需要）
+!**/src/test/**/target/         # 保留 src/test 下的 target 目录
+.mvn/                           # 忽略 .mvn 目录下的其他临时或本地配置
+
+# 2. IDE 编辑器配置相关
+.idea/                          # 忽略 IDEA 的项目级配置目录（包含本地运行配置等）
+*.iml                           # 忽略 IDEA 的模块配置文件
+*.ipr                           # 忽略 IDEA 的项目配置文件（旧版格式）
+*.iws                           # 忽略 IDEA 的工作区状态文件（旧版格式）
+
+# 3. 日志文件
+/logs/                          # 忽略项目根目录下的 logs 文件夹
+*.log                           # 忽略所有 .log 结尾的日志文件
+
+# 4. 环境变量 
+.env                            # 环境变量文件
+
+# 5. mysql本地数据
+/services/mysql/data/           #  MySQL 容器挂载的本地数据卷目录
+
+# 6. 个人临时文件
+plan.txt
